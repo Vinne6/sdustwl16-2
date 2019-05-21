@@ -18,7 +18,6 @@ public class UserAction {
         /*硬编码*/
         String str = userService.login(uname, upwd);
         return str;
-
     }
 
     @RequestMapping("/register.do")
@@ -26,7 +25,7 @@ public class UserAction {
     public String register(String uname, String upwd, String email) {
         /*硬编码*/
         boolean temp = userService.register(uname,upwd,email);
-          if (temp)
+        if (temp)
             return "success";
         else
             return "fault";
